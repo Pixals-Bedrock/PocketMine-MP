@@ -45,7 +45,7 @@ class Flat extends Generator{
 	 * @throws InvalidGeneratorOptionsException
 	 */
 	public function __construct(int $seed, string $preset){
-		parent::__construct($seed, $preset !== "" ? $preset : "2;bedrock,2xdirt,grass;1;");
+		parent::__construct($seed, "2;air;1;");
 		$this->options = FlatGeneratorOptions::parsePreset($this->preset);
 
 		if(isset($this->options->getExtraOptions()["decoration"])){
